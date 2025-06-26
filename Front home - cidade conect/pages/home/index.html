@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Cidade Conectada</title> 
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+  <div class="container">
+    <img src="/assect/logo.png" alt="Logo Cidade Conectada" class="logo">
+    <h1>Conectando sua cidade ao futuro</h1>
+    <p>Cadastre-se para receber novidades e fazer parte da transformação digital urbana.</p>
+
+    <form id="form">
+      <input type="text" name="nome" placeholder="Nome completo" required>
+      <input type="email" name="email" placeholder="Seu e-mail" required>
+      <button type="submit">Quero saber mais</button>
+      <br>
+      <div class="confirmation" id="confirmationMsg">Obrigado! Em breve você receberá novidades.</div>
+    </form>
+  </div>
+
+  <script>
+    const form = document.getElementById('form');
+    const confirmationMsg = document.getElementById('confirmationMsg');
+
+    form.addEventListener('submit', function(e) {
+      e.preventDefault();
+      confirmationMsg.style.display = 'block';
+      form.reset();
+    });
+  </script>
+
+</body>
+</html>
