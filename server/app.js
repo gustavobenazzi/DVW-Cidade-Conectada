@@ -43,7 +43,6 @@ app.post("/api/leads", async (req, res) => {
   }
 });
 
-// Rota de Login
 app.post("/api/login", async (req, res) => {
   const { username, password } = req.body;
 
@@ -73,8 +72,6 @@ app.post("/api/login", async (req, res) => {
   }
 });
 
-// Rotas administrativas:
-// Rota para listar e buscar leads
 app.get("/api/leads", authenticateToken, async (req, res) => {
   const { search } = req.query;
 
@@ -109,7 +106,6 @@ app.get("/api/leads", authenticateToken, async (req, res) => {
   }
 });
 
-// Rota para atualizar um lead por ID (nome e email são necessários)
 app.put("/api/leads/:id", authenticateToken, async (req, res) => {
   const { id } = req.params;
   const { nome, email } = req.body;
@@ -139,7 +135,6 @@ app.put("/api/leads/:id", authenticateToken, async (req, res) => {
   }
 });
 
-// Rota para deletar um lead por ID
 app.delete("/api/leads/:id", authenticateToken, async (req, res) => {
   const { id } = req.params;
 
@@ -159,7 +154,6 @@ app.delete("/api/leads/:id", authenticateToken, async (req, res) => {
 
 const { stringify } = require("csv-stringify");
 
-// Rota para exportar leads para CSV
 app.get("/api/leads/export/csv", authenticateToken, async (req, res) => {
   try {
     const leads = await prisma.lead.findMany();
