@@ -1,0 +1,140 @@
+* {
+  box-sizing: border-box;
+}
+
+.dashboard-container {
+  max-width: 900px;
+  margin: 40px auto;
+  padding: 30px;
+  font-family: Arial, sans-serif;
+  background: #f7f9fc;
+  border-radius: 8px;
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
+}
+
+.dashboard-container h2 {
+  text-align: center;
+  margin-top: 0;
+  margin-bottom: 25px;
+  color: #333;
+}
+
+.search-input {
+  width: 100%;
+  max-width: 350px;
+  padding: 10px 15px;
+  margin-bottom: 20px;
+  border: 1px solid #ccc;
+  border-radius: 5px;
+  font-size: 16px;
+  outline: none;
+  transition: border-color 0.3s ease, box-shadow 0.3s ease;
+}
+
+.search-input:focus {
+  border-color: #007bff;
+  box-shadow: 0 0 0 3px rgba(0, 123, 255, 0.2);
+}
+
+.leads-table {
+  width: 100%;
+  border-collapse: collapse;
+  background: white;
+  border-radius: 6px;
+  overflow: hidden;
+  box-shadow: 0 1px 3px rgba(0, 0, 0, 0.08);
+}
+
+.leads-table thead {
+  background-color: #007bff;
+  color: white;
+}
+
+.leads-table th {
+  padding: 15px;
+  text-align: left;
+  font-weight: 600;
+  text-transform: uppercase;
+  font-size: 12px;
+  letter-spacing: 0.5px;
+}
+
+.leads-table tbody tr:hover {
+  background-color: #f1f7ff;
+}
+
+.leads-table td {
+  padding: 15px;
+  border-bottom: 1px solid #eee;
+  color: #555;
+}
+
+.actions-cell {
+  display: flex;
+  flex-direction: column;
+  gap: 8px;
+  align-items: flex-start;
+}
+
+.btn {
+  padding: 6px 16px;
+  border: none;
+  border-radius: 4px;
+  cursor: pointer;
+  font-size: 14px;
+  font-weight: 500;
+  color: white;
+  transition: opacity 0.2s ease;
+  text-align: center;
+  min-width: 80px; 
+}
+
+.btn:hover {
+  opacity: 0.85;
+}
+
+.btn-edit {
+  background-color: #007bff; 
+}
+
+.btn-delete {
+  background-color: #6c757d; 
+}
+
+.edit-form {
+  margin-top: 30px;
+  background: white;
+  padding: 25px;
+  border-radius: 6px;
+  box-shadow: 0 1px 6px rgba(0, 0, 0, 0.1);
+  max-width: 500px;
+  border-top: 3px solid #007bff;
+}
+
+.edit-form h3 {
+  margin-top: 0;
+  margin-bottom: 20px;
+  color: #333;
+}
+
+.edit-form input {
+  width: 100%;
+  padding: 10px 12px;
+  margin-bottom: 15px;
+  font-size: 16px;
+  border: 1px solid #ccc;
+  border-radius: 5px;
+}
+
+.edit-form input:focus {
+  border-color: #007bff;
+}
+
+.btn-save {
+  background-color: #28a745; 
+  margin-right: 10px;
+}
+
+.btn-cancel {
+  background-color: #dc3545;
+}

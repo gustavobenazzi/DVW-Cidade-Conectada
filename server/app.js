@@ -18,7 +18,7 @@ app.get("/", (req, res) => {
   res.send("API está funcionando!");
 });
 
-// Rota para criar um lead
+
 app.post("/api/leads", async (req, res) => {
   const { nome, email } = req.body;
 
